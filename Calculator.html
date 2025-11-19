@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Calculator</title>
+<script>
+function append(x)
+{
+var a=document.getElementById("display").value;
+ b=a+x;
+ document.getElementById("display").value=b;
+}
+function cal1()
+{
+var x=document.getElementById("display").value;
+
+document.getElementById("display").value=eval(x);
+}
+</script>
+
+    </head>
+    <body>
+ 
+  <h1>Calculator</h1>      
+<table border="1">
+
+<tr><td colspan="5"><input type="text" id="display"></td></tr>
+<tr>
+<td><input type="button" value="C" id="c"></td>
+<td><input type="button" value="+" id="+" onclick="append('+')" > </td>
+<td><input type="button" value="-" id="-" onclick="append('-')" ></td>
+<td><input type="button" value="*" id="" onclick="append('*')"></td>
+<td><input type="button" value="/" id="/" onclick="append('/')"></td>
+</tr>
+<tr>
+<td><input type="button" value="9" onclick="append('9')"></td>
+<td> <input type="button" value="8" onclick="append('8')" ></td>
+<td><input type="button" value="7" onclick="append('7')"> </td>
+<td><input type="button" value="6" onclick="append('6')"></td>
+<td rowspan="3"><input type="button" value="=" onclick="cal1();" style="height: 100px;"></td>
+</tr>
+<td><input type="button" value="5" onclick="append('5')"></td>
+<td> <input type="button" value="4" onclick="append('4')" ></td>
+<td><input type="button" value="3" onclick="append('3')"> </td>
+<td><input type="button" value="2" onclick="append('2')"></td>
+</tr>
+<tr>
+<td><input type="button" value="1" onclick="append('1')"></td>
+<td colspan="3"> <input type="button" value="0" style="width: 100px;" onclick="append('0')" ></td>
+</tr>
+
+
+</table>
+
+
+
+    </body>
+</html>
